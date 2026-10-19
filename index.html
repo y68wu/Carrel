@@ -3,96 +3,316 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Carrel — a seven-part requirements-engineering portfolio for a campus study-space booking system."
-    />
+    <meta name="description" content="Carrel is a requirements-engineering case study for a fair, traceable campus study-space booking system." />
+    <meta name="theme-color" content="#173f35" />
     <title>Carrel — Campus Study Space Booking System</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
-      <header class="hero">
-        <p class="eyebrow">Requirements Engineering Portfolio</p>
-        <h1>Carrel</h1>
-        <p class="subtitle">A Campus Study Space Booking System</p>
-        <p class="summary">
-          Seven deliverables tracing the system from product scope and stakeholder needs to formal models,
-          quality requirements, project risk, and requirements-engineering research.
-        </p>
-        <div class="meta">
-          <span>University of Waterloo</span>
-          <span>CS 445 / SE 463 / CS 645</span>
-          <span>Spring 2026</span>
-        </div>
-      </header>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-      <section aria-labelledby="documents-title">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Project documentation</p>
-            <h2 id="documents-title">Seven deliverables, one link</h2>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Carrel home">
+        <span class="brand-mark" aria-hidden="true">C</span>
+        <span>Carrel</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#solution">Solution</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#documents">Documents</a>
+      </nav>
+      <a class="header-link" href="https://github.com/y68wu/Carrel">GitHub <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <div class="status-line">
+            <span class="status-dot" aria-hidden="true"></span>
+            Requirements engineering case study
           </div>
-          <a class="repo-link" href="https://github.com/y68wu/Carrel">View repository</a>
+          <h1>Campus space,<br /><em>made accountable.</em></h1>
+          <p class="hero-lede">
+            Carrel is a proposed campus-wide system for finding, reserving, and checking in to study spaces—designed
+            to prevent conflicting bookings, reclaim no-shows, and give administrators a traceable view of demand.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#overview">Explore the case study</a>
+            <a class="button button-secondary" href="https://github.com/y68wu/Carrel/blob/main/docs/Carrel_Report_EN.md">Read the full report</a>
+          </div>
+          <dl class="hero-meta">
+            <div><dt>Course</dt><dd>CS 445 / SE 463 / CS 645</dd></div>
+            <div><dt>Institution</dt><dd>University of Waterloo</dd></div>
+            <div><dt>Term</dt><dd>Spring 2026</dd></div>
+          </dl>
         </div>
 
-        <div class="document-grid">
-          <article class="card">
-            <p class="number">D1</p>
-            <h3>Project Scope and Product Perspective</h3>
-            <p>Problem definition, product vision, system context, assumptions, and initial project scope.</p>
-            <a href="pdfs/D1.pdf">Open PDF <span aria-hidden="true">↗</span></a>
-          </article>
+        <div class="hero-system" aria-label="Conceptual Carrel booking flow">
+          <div class="system-topline">
+            <span>Booking lifecycle</span>
+            <span class="live-pill">Concept model</span>
+          </div>
+          <div class="booking-card">
+            <div class="booking-icon" aria-hidden="true">01</div>
+            <div>
+              <span class="booking-kicker">Discover</span>
+              <strong>Find an eligible space</strong>
+              <small>Time · building · capacity · amenities</small>
+            </div>
+            <span class="step-check" aria-hidden="true">✓</span>
+          </div>
+          <div class="connector" aria-hidden="true"></div>
+          <div class="booking-card">
+            <div class="booking-icon" aria-hidden="true">02</div>
+            <div>
+              <span class="booking-kicker">Validate</span>
+              <strong>Check every booking rule</strong>
+              <small>Eligibility · conflicts · closures · quotas</small>
+            </div>
+            <span class="step-check" aria-hidden="true">✓</span>
+          </div>
+          <div class="connector" aria-hidden="true"></div>
+          <div class="booking-card booking-card-active">
+            <div class="booking-icon" aria-hidden="true">03</div>
+            <div>
+              <span class="booking-kicker">Arrive</span>
+              <strong>Check in or release</strong>
+              <small>Verified arrival or automatic no-show recovery</small>
+            </div>
+            <span class="pulse" aria-hidden="true"></span>
+          </div>
+          <div class="system-footer">
+            <div><span class="mini-label">Student</span><strong>Clear next step</strong></div>
+            <div><span class="mini-label">Administrator</span><strong>Auditable policy</strong></div>
+          </div>
+        </div>
+      </section>
 
-          <article class="card">
-            <p class="number">D2</p>
-            <h3>Domain Model and Stakeholder Analysis</h3>
-            <p>Domain concepts, relationships, stakeholder groups, goals, concerns, and influence.</p>
-            <a href="pdfs/D2.pdf">Open PDF <span aria-hidden="true">↗</span></a>
-          </article>
+      <section class="notice" aria-labelledby="status-title">
+        <div class="notice-label">Project status</div>
+        <div>
+          <h2 id="status-title">A specification and planning package—not a deployed product.</h2>
+          <p>
+            The work defines what Carrel should do, when actions are legal, how quality should be measured, and how
+            delivery risk can be analyzed. Performance numbers below are testable targets; effort and risk numbers are
+            model outputs. They are not production measurements.
+          </p>
+        </div>
+      </section>
 
-          <article class="card">
-            <p class="number">D3</p>
-            <h3>Use Case Diagram and Descriptions</h3>
-            <p>System actors, use-case relationships, primary flows, alternatives, and exception paths.</p>
-            <a href="pdfs/D3.pdf">Open PDF <span aria-hidden="true">↗</span></a>
-          </article>
+      <section class="section" id="overview">
+        <div class="section-intro">
+          <p class="eyebrow">The opportunity</p>
+          <h2>Booking a room should not feel like detective work.</h2>
+          <p>
+            Campus study space is scarce, yet the path from “I need a room” to “I am checked in” is often fragmented.
+            Carrel turns that ambiguity into one policy-aware journey.
+          </p>
+        </div>
+        <div class="problem-grid">
+          <article class="problem-card"><span class="card-index">01</span><h3>Poor visibility</h3><p>Students need one place to compare location, capacity, amenities, accessibility, and availability.</p></article>
+          <article class="problem-card"><span class="card-index">02</span><h3>Ghost reservations</h3><p>Booked rooms can sit empty when a student does not arrive and the capacity is never released.</p></article>
+          <article class="problem-card"><span class="card-index">03</span><h3>Conflicts and unfairness</h3><p>Overlaps, quotas, advance windows, and maintenance closures require consistent enforcement.</p></article>
+          <article class="problem-card"><span class="card-index">04</span><h3>Administrative overhead</h3><p>Disputes and exceptions need linked records, explicit reasons, and an auditable decision trail.</p></article>
+        </div>
+      </section>
 
-          <article class="card">
-            <p class="number">D4</p>
-            <h3>Functional Model, OCL, and State Diagram</h3>
-            <p>Behavioral models, formal constraints, system operations, and lifecycle state transitions.</p>
-            <a href="pdfs/D4.pdf">Open PDF <span aria-hidden="true">↗</span></a>
+      <section class="section solution-section" id="solution">
+        <div class="section-intro section-intro-light">
+          <p class="eyebrow">Proposed solution</p>
+          <h2>One system, three coordinated experiences.</h2>
+          <p>
+            The design connects student tasks, administrator controls, and timed services around a single booking
+            lifecycle—from discovery to completion, cancellation, or no-show release.
+          </p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability-card">
+            <div class="capability-icon" aria-hidden="true">S</div><h3>For students</h3>
+            <ul><li>Search by time, building, capacity, and amenities</li><li>Reserve after a fresh conflict and policy check</li><li>Check in with a bounded code or QR credential</li><li>Cancel, review bookings, and file a dispute</li></ul>
           </article>
-
-          <article class="card">
-            <p class="number">D5</p>
-            <h3>Quality Requirements and Prioritization</h3>
-            <p>Measurable quality attributes, requirement trade-offs, prioritization, and rationale.</p>
-            <a href="pdfs/D5.pdf">Open PDF <span aria-hidden="true">↗</span></a>
+          <article class="capability-card">
+            <div class="capability-icon" aria-hidden="true">A</div><h3>For administrators</h3>
+            <ul><li>Manage study-space inventory and attributes</li><li>Configure quotas, windows, and booking rules</li><li>Schedule maintenance closures</li><li>Resolve disputes and record justified overrides</li></ul>
           </article>
-
-          <article class="card">
-            <p class="number">D6</p>
-            <h3>Cost, Risk, and LTL Constraints</h3>
-            <p>Project estimation, risk assessment and mitigation, plus temporal-logic constraints.</p>
-            <a href="pdfs/D6.pdf">Open PDF <span aria-hidden="true">↗</span></a>
+          <article class="capability-card">
+            <div class="capability-icon" aria-hidden="true">↻</div><h3>For the system</h3>
+            <ul><li>Authenticate through the university identity service</li><li>Send notices and create calendar invitations</li><li>Release no-shows after the check-in deadline</li><li>Preserve traceable state for later review</li></ul>
           </article>
+        </div>
 
-          <article class="card featured">
-            <p class="number">D7</p>
-            <h3>Software Project Management and RE Research</h3>
-            <p>Research synthesis covering project management, human factors, AI systems, and formal RE.</p>
-            <a href="pdfs/D7.pdf">Open PDF <span aria-hidden="true">↗</span></a>
+        <div class="journey" aria-labelledby="journey-title">
+          <div class="journey-copy">
+            <p class="eyebrow">End-to-end flow</p>
+            <h3 id="journey-title">The reservation is revalidated at the moment it matters.</h3>
+            <p>
+              Search results can become stale. Before creating a booking, Carrel checks the student, time interval,
+              active-booking limit, overlaps, closures, and applicable rules again. Failure returns a specific reason
+              without leaving a partly accepted booking.
+            </p>
+          </div>
+          <ol class="journey-steps">
+            <li><span>1</span><div><strong>Authenticate</strong><small>Establish identity and role</small></div></li>
+            <li><span>2</span><div><strong>Discover</strong><small>Filter suitable spaces</small></div></li>
+            <li><span>3</span><div><strong>Revalidate</strong><small>Check rules and conflicts</small></div></li>
+            <li><span>4</span><div><strong>Confirm</strong><small>Create booking and check-in code</small></div></li>
+            <li><span>5</span><div><strong>Resolve</strong><small>Check in, cancel, release, or dispute</small></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="stats" aria-label="Project scope at a glance">
+        <article><strong>17</strong><span>updated use cases</span></article>
+        <article><strong>5</strong><span>formal operations</span></article>
+        <article><strong>12</strong><span>OCL invariants</span></article>
+        <article><strong>21</strong><span>quality requirements</span></article>
+        <article><strong>10</strong><span>LTL properties</span></article>
+        <article><strong>264</strong><span>estimated UFP</span></article>
+      </section>
+
+      <section class="section evidence-section" id="evidence">
+        <div class="section-intro">
+          <p class="eyebrow">Evidence, not decoration</p>
+          <h2>Models make the design inspectable.</h2>
+          <p>
+            Each artifact answers a different question: what exists, who acts, how state changes, which requirements
+            matter most, and what must remain true over time. Select an image to open its source PDF.
+          </p>
+        </div>
+
+        <div class="gallery">
+          <a class="visual-card visual-card-wide" href="pdfs/D4.pdf#page=3">
+            <div class="visual-frame visual-frame-landscape"><img src="assets/domain-model.png" width="1515" height="1248" loading="lazy" decoding="async" alt="Updated Carrel domain model showing users, spaces, bookings, policies, check-ins, closures, and disputes" /></div>
+            <div class="visual-caption"><div><span>D4 · Domain structure</span><h3>A shared vocabulary for policy and state</h3></div><span class="open-icon" aria-hidden="true">↗</span></div>
+          </a>
+          <a class="visual-card" href="pdfs/D4.pdf#page=4">
+            <div class="visual-frame visual-frame-landscape"><img src="assets/use-case-diagram.png" width="1788" height="1032" loading="lazy" decoding="async" alt="Carrel use case diagram with student, administrator, identity, calendar, notification, and timed-system actors" /></div>
+            <div class="visual-caption"><div><span>D4 · Functional map</span><h3>Actors and seventeen use cases</h3></div><span class="open-icon" aria-hidden="true">↗</span></div>
+          </a>
+          <a class="visual-card" href="pdfs/D4.pdf#page=14">
+            <div class="visual-frame visual-frame-portrait"><img src="assets/state-diagram.png" width="1455" height="1722" loading="lazy" decoding="async" alt="Carrel state diagram for student and administrator application states" /></div>
+            <div class="visual-caption"><div><span>D4 · Behavior</span><h3>From sign-in to resolution</h3></div><span class="open-icon" aria-hidden="true">↗</span></div>
+          </a>
+          <a class="visual-card" href="pdfs/D5.pdf#page=23">
+            <div class="visual-frame visual-frame-square"><img src="assets/cost-value-prioritization.png" width="1416" height="1362" loading="lazy" decoding="async" alt="Carrel cost-value prioritization chart ranking quality requirements" /></div>
+            <div class="visual-caption"><div><span>D5 · Prioritization</span><h3>Make trade-offs explicit</h3></div><span class="open-icon" aria-hidden="true">↗</span></div>
+          </a>
+          <a class="visual-card visual-card-wide" href="pdfs/D6.pdf#page=20">
+            <div class="visual-frame visual-frame-risk"><img src="assets/risk-reduction.png" width="1548" height="906" loading="lazy" decoding="async" alt="Residual risk table showing modeled total criticality before and after countermeasures" /></div>
+            <div class="visual-caption"><div><span>D6 · Risk model</span><h3>Quantify assumptions and residual exposure</h3></div><span class="open-icon" aria-hidden="true">↗</span></div>
+          </a>
+          <a class="visual-card visual-card-wide" href="pdfs/D6.pdf#page=22">
+            <div class="visual-frame visual-frame-ltl"><img src="assets/ltl-constraints.png" width="1548" height="1458" loading="lazy" decoding="async" alt="Natural-language quality properties paired with Linear Temporal Logic statements" /></div>
+            <div class="visual-caption"><div><span>D6 · Temporal logic</span><h3>Describe behavior across successive states</h3></div><span class="open-icon" aria-hidden="true">↗</span></div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section formal-section">
+        <div class="formal-copy">
+          <p class="eyebrow">Functional precision</p>
+          <h2>From user intent to testable rules.</h2>
+          <p>Five operations define signatures, preconditions, state changes, postconditions, and exception behavior. Twelve OCL invariants describe persistent consistency, while ten LTL properties capture behavior across time.</p>
+          <div class="formal-tags" aria-label="Formal specification methods"><span>Operation contracts</span><span>OCL</span><span>LTL</span><span>State machines</span></div>
+        </div>
+        <div class="code-stack">
+          <article class="code-card">
+            <div class="code-heading"><span>Conflict detection</span><small>half-open intervals</small></div>
+            <code>(t₁ &lt; booking.end) ∧ (t₂ &gt; booking.start)</code>
+            <p>Back-to-back bookings can meet at one endpoint; genuine overlaps are rejected.</p>
+          </article>
+          <article class="code-card code-card-dark">
+            <div class="code-heading"><span>No-show integrity</span><small>LTL intent</small></div>
+            <code>G(activeBooking(b) → (¬conflict(b) W (cancelled(b) ∨ noShowReleased(b) ∨ completed(b))))</code>
+            <p>An active booking remains non-conflicting until it is cancelled, released, or completed.</p>
           </article>
         </div>
       </section>
 
-      <footer>
-        <p><strong>The Reservists</strong> — Kevin Wang, Chris Wu, and Rui Lin</p>
-        <p>Carrel requirements-engineering portfolio</p>
-      </footer>
+      <section class="section measurement-section">
+        <div class="section-intro">
+          <p class="eyebrow">Quantitative engineering</p>
+          <h2>“Fast” and “reliable” become measurable claims.</h2>
+          <p>The quality specification defines evaluation conditions and fit criteria. These values are design targets for a future implementation, not observed product performance.</p>
+        </div>
+        <div class="targets-grid">
+          <article class="target-card"><span>Search response</span><strong>≤ 2.0 s</strong><small>p95 target under the specified 500-session load</small></article>
+          <article class="target-card"><span>Booking response</span><strong>≤ 3.0 s</strong><small>p95 target for a validated reservation</small></article>
+          <article class="target-card"><span>Check-in throughput</span><strong>≥ 20/s</strong><small>sustained validation target</small></article>
+          <article class="target-card"><span>Availability</span><strong>≥ 99.5%</strong><small>academic-term service target</small></article>
+          <article class="target-card"><span>No-show correctness</span><strong>≥ 99.9%</strong><small>automated release target</small></article>
+          <article class="target-card"><span>Statement coverage</span><strong>≥ 80%</strong><small>core booking module process target</small></article>
+        </div>
+      </section>
+
+      <section class="section analysis-section">
+        <div class="analysis-panel">
+          <div class="analysis-heading">
+            <p class="eyebrow">Planning model</p><h2>Estimate the shape of the work.</h2>
+            <p>Function Point Analysis and organic COCOMO translate the proposed scope into a planning baseline. They support discussion; they do not guarantee actual cost or delivery time.</p>
+          </div>
+          <div class="estimate-grid">
+            <article><strong>264</strong><span>Unadjusted Function Points</span></article>
+            <article><strong>7,656</strong><span>estimated source lines</span></article>
+            <article><strong>23.50</strong><span>person-months</span></article>
+            <article><strong>8.30</strong><span>months forecast</span></article>
+            <article><strong>2.83</strong><span>average people</span></article>
+          </div>
+        </div>
+        <div class="risk-panel">
+          <div>
+            <p class="eyebrow">Risk model</p><h3>Countermeasures reduce modeled criticality.</h3>
+            <p>Five risks were assigned probabilities, impacts, and mitigation efficiencies. Under those assumptions, the displayed totals imply an 85.77% reduction. This is a model result—not measured real-world efficacy.</p>
+          </div>
+          <div class="risk-bars" aria-label="Modeled criticality reduces from 0.5859 to 0.0834">
+            <div class="risk-row"><div><span>Original</span><strong>0.5859</strong></div><div class="bar-track"><span class="bar-original"></span></div></div>
+            <div class="risk-row"><div><span>Residual</span><strong>0.0834</strong></div><div class="bar-track"><span class="bar-residual"></span></div></div>
+            <div class="reduction-badge"><strong>85.77%</strong><span>modeled reduction</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process-section" aria-labelledby="process-title">
+        <div class="section-intro"><p class="eyebrow">Requirements journey</p><h2 id="process-title">Each stage narrows a different kind of uncertainty.</h2></div>
+        <ol class="process-list">
+          <li><span>D1</span><div><strong>Frame the product</strong><p>Define the problem, vision, boundary, assumptions, and system context.</p></div></li>
+          <li><span>D2</span><div><strong>Understand the domain</strong><p>Map stakeholders, concepts, relationships, goals, concerns, and influence.</p></div></li>
+          <li><span>D3</span><div><strong>Describe interaction</strong><p>Connect actors to goals, main success scenarios, alternatives, and exceptions.</p></div></li>
+          <li><span>D4</span><div><strong>Specify behavior</strong><p>Define operations, OCL invariants, lifecycle state, and legal transitions.</p></div></li>
+          <li><span>D5</span><div><strong>Set quality thresholds</strong><p>Replace vague qualities with fit criteria and prioritize cost against value.</p></div></li>
+          <li><span>D6</span><div><strong>Plan delivery and risk</strong><p>Estimate scope and effort, model risks, and express temporal properties.</p></div></li>
+          <li><span>D7</span><div><strong>Connect research to practice</strong><p>Synthesize project management, human factors, AI, and formal RE research.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="section documents-section" id="documents">
+        <div class="documents-heading">
+          <div><p class="eyebrow">Project documentation</p><h2>Trace the complete design record.</h2></div>
+          <div class="documents-actions"><a href="https://github.com/y68wu/Carrel/blob/main/docs/Carrel_Report_EN.md">Full English report</a><a href="https://github.com/y68wu/Carrel">Source repository</a></div>
+        </div>
+        <div class="document-grid">
+          <article class="document-card"><div class="document-top"><span>D1</span><small>Foundation</small></div><h3>Project Scope &amp; Product Perspective</h3><p>Problem definition, vision, context, assumptions, and initial system boundary.</p><a href="pdfs/D1.pdf">Open PDF <span aria-hidden="true">↗</span></a></article>
+          <article class="document-card"><div class="document-top"><span>D2</span><small>Domain</small></div><h3>Domain Model &amp; Stakeholders</h3><p>Concepts, relationships, stakeholder groups, goals, concerns, and influence.</p><a href="pdfs/D2.pdf">Open PDF <span aria-hidden="true">↗</span></a></article>
+          <article class="document-card"><div class="document-top"><span>D3</span><small>Interaction</small></div><h3>Use Cases &amp; Descriptions</h3><p>Actors, goals, main success scenarios, alternative flows, and exception paths.</p><a href="pdfs/D3.pdf">Open PDF <span aria-hidden="true">↗</span></a></article>
+          <article class="document-card"><div class="document-top"><span>D4</span><small>Formal model</small></div><h3>Operations, OCL &amp; State</h3><p>Five functional contracts, twelve invariants, and application state transitions.</p><a href="pdfs/D4.pdf">Open PDF <span aria-hidden="true">↗</span></a></article>
+          <article class="document-card"><div class="document-top"><span>D5</span><small>Quality</small></div><h3>Quality &amp; Prioritization</h3><p>Twenty-one measurable requirements, trade-offs, cost–value ranking, and rationale.</p><a href="pdfs/D5.pdf">Open PDF <span aria-hidden="true">↗</span></a></article>
+          <article class="document-card"><div class="document-top"><span>D6</span><small>Planning</small></div><h3>Estimation, Risk &amp; LTL</h3><p>Function points, COCOMO, risk countermeasures, and ten temporal properties.</p><a href="pdfs/D6.pdf">Open PDF <span aria-hidden="true">↗</span></a></article>
+          <article class="document-card document-card-featured"><div class="document-top"><span>D7</span><small>Research</small></div><h3>Software Project Management &amp; RE Research</h3><p>Research synthesis across project practice, human factors, AI systems, and formal methods.</p><a href="pdfs/D7.pdf">Open PDF <span aria-hidden="true">↗</span></a></article>
+        </div>
+      </section>
+
+      <section class="closing">
+        <p class="eyebrow">The Reservists</p>
+        <h2>Kevin Wang · Chris Wu · Rui Lin</h2>
+        <p>A University of Waterloo requirements-engineering project focused on fair access, explicit policy, and traceable decision-making for campus study spaces.</p>
+        <a class="button button-light" href="https://github.com/y68wu/Carrel/blob/main/docs/Carrel_Report_EN.md">Read the complete project report</a>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <p>Carrel · Campus Study Space Booking System</p>
+      <p>Specification &amp; planning project · Spring 2026</p>
+    </footer>
   </body>
 </html>
-
